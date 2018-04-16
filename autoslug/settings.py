@@ -59,9 +59,8 @@ Django settings that affect django-autoslug:
 """
 from django.conf import settings
 try:
-  import django.core.urlresolvers
   from django.core.urlresolvers import get_callable
-except ImportError:
+except:
   from django.urls import get_callable
 
 # use custom slugifying function if any
